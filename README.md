@@ -44,7 +44,11 @@ Everything runs in the visitor's browser on GitHub Pages. There is no server, no
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff). A permanent DOI will be added at the first release.
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23732497.svg)](https://doi.org/10.5281/zenodo.23732497)
+
+Panda, A. (2026). *The Asked Method: Evidence-Backed Question Planning For AI Search.* https://doi.org/10.5281/zenodo.23732497
+
+See [CITATION.cff](CITATION.cff) for citation metadata.
 
 ## Author
 
