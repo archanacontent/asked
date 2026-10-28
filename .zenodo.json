@@ -1,0 +1,13 @@
+{
+  "title": "Asked: Free AEO And GEO Question Finder For B2B Content",
+  "upload_type": "software",
+  "description": "Asked is a free, open-source AEO and GEO question finder for B2B content. Enter a keyword to see the questions AI search will ask about it, each labelled with the evidence behind it (Confirmed, Search Demand or Predicted Fan-Out), shaped into a content brief. This release includes the Asked Method and the Citable Passage Standard. Live site: https://archanacontent.github.io/asked/",
+  "creators": [
+    { "name": "Panda, Archana" }
+  ],
+  "keywords": ["answer engine optimization", "generative engine optimization", "query fan-out", "content strategy", "B2B content", "AEO", "GEO"],
+  "license": "AGPL-3.0-only",
+  "related_identifiers": [
+    { "identifier": "https://archanacontent.github.io/asked/", "relation": "isDocumentedBy", "resource_type": "publication-other" }
+  ]
+}
