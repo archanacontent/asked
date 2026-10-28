@@ -1,0 +1,32 @@
+{
+  "home": {
+    "version": 1,
+    "storageKey": "tour-home-v1",
+    "trigger": "First visit to the homepage",
+    "delayMs": 900,
+    "welcome": {
+      "title": "Welcome To <span style=\"font-style:italic;color:#D9541F\">Asked</span>",
+      "body": "Find the questions AI search will ask about your keyword, with the evidence behind each one, before you start writing.",
+      "start": "Show Me Around",
+      "skip": "Skip For Now"
+    },
+    "steps": [
+      { "anchor": ["#tour-keyword"], "side": "bottom", "title": "Start With A Keyword", "body": "Use a specific B2B topic, like CRM software. Broad single words return thinner results." },
+      { "anchor": ["#tour-evidence"], "side": "top", "title": "Every Question Shows Its Proof", "body": "Each question carries a label, so you can see which ones buyers type and which ones AI search is predicted to ask." },
+      { "anchor": ["#tour-method"], "side": "bottom", "title": "See How It Works", "body": "The method and the Citable Passage Standard are published in full, so you can check every rule yourself.", "last": "Start Searching" }
+    ]
+  },
+  "results": {
+    "version": 1,
+    "storageKey": "tour-results-v1",
+    "trigger": "First time a visitor sees a set of results",
+    "delayMs": 600,
+    "steps": [
+      { "anchor": ["#tour-chip"], "side": "bottom", "title": "Read The Label First", "body": "Confirmed questions have both real demand and predicted fan-out behind them. Build your piece around these." },
+      { "anchor": ["#tour-format"], "side": "bottom", "title": "Match The Answer Shape", "body": "Each question shows the format its answer should take, from a one-line definition to a side-by-side comparison." },
+      { "anchor": ["#tour-toggle"], "side": "left", "title": "Shape Your Brief", "body": "Untick anything that doesn't fit, or edit a question's wording. Only included questions go into the brief." },
+      { "anchor": ["#tour-build"], "side": "top", "title": "Build And Export", "body": "Turn your selection into a brief you can paste into Google Docs or download as Markdown." },
+      { "anchor": ["#tour-settings"], "side": "bottom", "title": "Choose How It Predicts", "body": "The built-in engine needs no key. Add a free Gemini key in settings for sharper fan-out predictions.", "last": "Got It" }
+    ]
+  }
+}

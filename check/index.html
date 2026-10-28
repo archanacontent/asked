@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check Your Predictions · Asked</title>
+<meta name="description" content="Compare an Asked content brief with your Bing Webmaster Tools and Google Search Console AI data to see which predicted questions surfaced in real AI answers.">
+<link rel="canonical" href="https://archanacontent.github.io/asked/check/">
+<meta name="theme-color" content="#05060F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305060F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='20' text-anchor='middle' fill='%23FF7A45'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;1,600&family=Inter:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-base="../">
+
+<header class="site-header">
+<div class="wrap">
+<a class="wordmark" href="../">Asked</a>
+<nav class="nav" aria-label="Main">
+<a href="../method/">Method</a>
+<a href="../standard/">Standard</a>
+<a href="https://github.com/archanacontent/asked">GitHub</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap" style="padding-top:64px;padding-bottom:96px">
+<p class="eyebrow">After You Publish</p>
+<h1 class="h1-page">Check Your Predictions</h1>
+<p class="lead" style="margin-bottom:48px">Once your piece is live, compare the brief against what AI search actually used. It takes a few minutes and tells you which questions earned their place.</p>
+
+<form id="check-form" class="grid g300" novalidate>
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="cb" class="field-lbl">Grounding Queries From Bing</label>
+<textarea id="cb" class="field" rows="6" placeholder="One query per line"></textarea>
+<p class="micro" style="margin:0">Copy them from the AI Performance report in Bing Webmaster Tools.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="cg" class="field-lbl">Queries From Search Console</label>
+<textarea id="cg" class="field" rows="6" placeholder="One query per line"></textarea>
+<p class="micro" style="margin:0">Export them from the generative AI report in Google Search Console.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<label for="cr" class="field-lbl">Your Brief</label>
+<textarea id="cr" class="field" rows="6" placeholder="Paste the exported brief"></textarea>
+<p class="micro" style="margin:0">Paste the brief you exported, or <a href="#" id="reopen">reopen it from this browser</a>.</p>
+</div>
+<div style="grid-column:1/-1">
+<button type="submit" class="btn">Compare</button>
+<p class="field-error" role="alert" id="check-error" hidden></p>
+</div>
+</form>
+
+<section id="check-results" aria-label="Results" style="margin-top:64px" hidden>
+<div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:24px">
+<h2 style="margin:0;font-family:var(--f-head);font-weight:600;font-size:27px" id="cr-title">Your Results</h2>
+</div>
+<p class="empty" id="no-matches" hidden>None of the predicted questions match these queries yet. New pages often take a few weeks to appear in AI reports, so check back later.</p>
+<div class="grid g300">
+<div class="res-col surfaced"><h3>Surfaced</h3><p class="d">Predicted questions that matched real AI search queries.</p><div id="r-surfaced"></div></div>
+<div class="res-col"><h3>Not Yet Seen</h3><p class="d">Predicted questions with no match so far, which may still surface as data builds.</p><div id="r-unseen"></div></div>
+<div class="res-col unexpected"><h3>Unexpected</h3><p class="d">Real queries the brief never predicted, worth adding to your next update.</p><div id="r-unexpected"></div></div>
+</div>
+
+<div class="panel" style="margin-top:32px;padding:28px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px" id="share-box">
+<div style="flex:1 1 460px;min-width:0" data-share-ask>
+<p style="margin:0 0 8px;font-family:var(--f-head);font-weight:600;font-size:19px">Help Sharpen The Predictions</p>
+<p style="margin:0;font-size:14px;line-height:1.6;color:rgba(238,241,248,.68)">Share which predictions held up. Only the keyword, the questions and their match results are sent. Your site, queries outside the brief and anything that identifies you stay in your browser.</p>
+</div>
+<div style="flex:0 0 auto;display:flex;gap:16px;align-items:center" data-share-ask>
+<button type="button" class="text-btn" id="no-thanks">No thanks</button>
+<button type="button" class="btn sm" id="share">Share The Results</button>
+</div>
+<p role="status" id="share-status" hidden style="margin:0;font-size:14px"></p>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="wrap">
+<span class="wordmark">Asked</span>
+<p>Code licensed under AGPL-3.0 · Method licensed under CC BY-NC 4.0 · <span class="ital">Asked</span> is an independent project and is not affiliated with Google or Microsoft · Built by <a href="https://archanacontent.github.io">Archana Panda</a></p>
+</div>
+</footer>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/engine.js"></script>
+<script src="../assets/js/check.js"></script>
+</body>
+</html>

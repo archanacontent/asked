@@ -1,0 +1,17 @@
+# Asked
+
+> Asked is a free, open-source AEO and GEO question finder for B2B content by Archana Panda. Enter a keyword to see the questions AI search will ask about it, each labelled with the evidence behind it (Confirmed, Search Demand or Predicted Fan-Out), shaped into a content brief.
+
+## Method
+
+- [The Asked Method](https://archanacontent.github.io/asked/method/): where questions come from, the B2B evaluation path, evidence labels, ranking, answer formats and how predictions are checked against Bing Webmaster Tools and Google Search Console AI data.
+- [The Citable Passage Standard](https://archanacontent.github.io/asked/standard/): writing rules for content AI search can cite, with a before and after example.
+
+## Tool
+
+- [Homepage](https://archanacontent.github.io/asked/): search for a keyword.
+- [Check Your Predictions](https://archanacontent.github.io/asked/check/): compare a published brief with real AI search queries.
+
+## Source
+
+- [GitHub repository](https://github.com/archanacontent/asked): code under AGPL-3.0, method under CC BY-NC 4.0.

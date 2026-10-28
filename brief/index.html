@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content Brief · Asked</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#05060F">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305060F'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='20' text-anchor='middle' fill='%23FF7A45'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;1,600&family=Inter:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body data-base="../">
+
+<header class="site-header">
+<div class="wrap">
+<a class="wordmark" href="../">Asked</a>
+<a href="#" id="back-link" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;color:rgba(238,241,248,.75)"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>Back To Questions</a>
+</div>
+</header>
+
+<main class="wrap tool-main">
+<div id="no-brief" class="empty" hidden>No brief yet. <a href="../">Find the questions for a keyword</a> to build one.</div>
+<div id="brief-wrap" style="display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start" hidden>
+<article class="brief-doc panel" id="brief-doc">
+<p class="eyebrow" style="margin-bottom:12px">Content Brief</p>
+<h1 class="h2" style="margin:0 0 10px" id="b-title"></h1>
+<p class="meta-line" style="margin-bottom:40px" id="b-meta"></p>
+<h2>Must-Answer Questions</h2>
+<ol class="brief-list" id="b-must"></ol>
+<h2>Suggested Outline</h2>
+<div id="b-outline" style="margin-bottom:40px"></div>
+<h2>Facts And Entities To Include</h2>
+<div class="chips" id="b-entities"></div>
+<p class="verify"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2C46B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:0 0 auto;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>Suggested by the prediction engine. Verify every fact and figure before publishing.</p>
+<h2>Writing Rules</h2>
+<ul style="margin:0 0 12px;padding:0 0 0 18px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.6;color:rgba(238,241,248,.75)">
+<li>Answer each question in the opening sentence of its section.</li>
+<li>Make every passage stand alone, and name the subject in full.</li>
+<li>Use specific figures, and link every one to its source.</li>
+<li>Keep one question to one section.</li>
+</ul>
+<a href="../standard/" style="font-size:13px;font-weight:500">Read The Citable Passage Standard</a>
+<p style="margin:48px 0 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;line-height:1.6;color:rgba(238,241,248,.5)">Brief built with <span class="ital">Asked</span>, a free question finder by Archana Panda. Method published under CC BY-NC 4.0.</p>
+</article>
+
+<aside class="export">
+<div class="panel" style="padding:24px">
+<p style="margin:0 0 16px;font-family:var(--f-head);font-weight:600;font-size:17px">Export</p>
+<div style="display:flex;flex-direction:column;gap:10px">
+<button type="button" class="export-btn primary" data-export="docs"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></svg>Copy For Google Docs</button>
+<button type="button" class="export-btn" data-export="md"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M4 20h16"/></svg>Download Markdown</button>
+<button type="button" class="export-btn" data-export="text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h9"/></svg>Copy As Plain Text</button>
+</div>
+<p class="toast" role="status" id="toast" hidden></p>
+</div>
+<a href="../check/" class="card link-card" style="padding:20px 24px">
+<span style="font-size:14px;font-weight:500">Published This Piece?</span>
+<span class="d">Check which predicted questions surfaced in real AI answers.</span>
+<span class="go" style="margin-top:2px">Check Your Predictions</span>
+</a>
+</aside>
+</div>
+</main>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/brief.js"></script>
+</body>
+</html>

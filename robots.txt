@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /results/
+Disallow: /brief/
+
+Sitemap: https://archanacontent.github.io/asked/sitemap.xml
