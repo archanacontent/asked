@@ -245,6 +245,17 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .progress span { display: block; height: 100%; width: 0; background: var(--ember); transition: width .5s var(--ease); }
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* Callout and label guide */
+.callout { display: flex; gap: 14px; align-items: flex-start; margin: 0 0 16px; padding: 18px 20px; border-radius: 16px; border: 1px solid rgba(255, 122, 69, .4); background: rgba(255, 122, 69, .07); }
+.callout svg { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 2px; fill: none; stroke: var(--ember); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.callout .t { margin: 0 0 6px; font-size: 14px; font-weight: 500; color: var(--bone); }
+.callout p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--mute); }
+.label-guide { margin: 0 0 24px; border-top: 0; border: 1px solid var(--line); border-radius: 16px; padding: 0 20px; }
+.label-guide .acc-item { border-bottom: 0; }
+.label-guide .acc-btn { padding: 16px 0; font-size: 14px; }
+.label-guide .acc-panel { padding-bottom: 20px; }
+.label-guide .legend-row p { font-size: 13px; }
+
 /* Notice */
 .notice { padding: 20px; border-radius: 16px; border: 1px solid rgba(242, 196, 107, .35); }
 .notice .t { margin: 0 0 8px; font-size: 14px; font-weight: 500; color: var(--demand); }

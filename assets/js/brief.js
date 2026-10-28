@@ -7,6 +7,8 @@
   var MARKETS = { us: 'United States', gb: 'United Kingdom', in: 'India', ca: 'Canada', au: 'Australia', sg: 'Singapore' };
   var FACETS = ['Fit And Function', 'Cost', 'Security And Compliance', 'Integration And Rollout', 'Alternatives And Trade-Offs', 'Proof And Outcomes'];
   var FOOTER = 'Brief built with Asked, a free question finder by Archana Panda. Method published under CC BY-NC 4.0.';
+  var DISCLAIMER_T = 'Suggested Questions, Not Final Answers';
+  var DISCLAIMER = 'Every question in this brief is a suggestion drawn from public search data and the Asked Method. Review each one against your topic, audience and product, and keep only the questions that genuinely fit. Your judgement makes the final call.';
   var RULES = ['Answer each question in the opening sentence of its section.', 'Make every passage stand alone, and name the subject in full.', 'Use specific figures, and link every one to its source.', 'Keep one question to one section.'];
 
   if (!state || !state.questions) { $('no-brief').hidden = false; $('back-link').href = '../'; return; }
@@ -47,7 +49,7 @@
     : '<span style="font-size:13px;color:var(--soft)">No named tools or standards surfaced for this keyword. Add a Gemini key in settings for richer suggestions.</span>';
 
   function markdown() {
-    var out = ['# ' + title, '', '_' + meta + '_', '', '## Must-Answer Questions', ''];
+    var out = ['# ' + title, '', '_' + meta + '_', '', '> **' + DISCLAIMER_T + '.** ' + DISCLAIMER, '', '## Must-Answer Questions', ''];
     must.forEach(function (x, i) { out.push((i + 1) + '. ' + x.text + ' (' + x.format + ', ' + x.label + ')'); });
     out.push('', '## Suggested Outline', '');
     outline.forEach(function (o) { out.push('- H2: ' + o.h + ' (' + o.f + ')'); });
@@ -56,12 +58,12 @@
     if (entities.length) entities.forEach(function (e) { out.push('- ' + e); }); else out.push('- None surfaced for this keyword');
     out.push('', '_Suggested by the prediction engine. Verify every fact and figure before publishing._', '', '## Writing Rules', '');
     RULES.forEach(function (r) { out.push('- ' + r); });
-    out.push('', 'Full standard: https://archanacontent.github.io/asked/standard/', '', '---', '', FOOTER);
+    out.push('', 'Full standard: https://archanacontent.github.io/asked/standard/', '', '---', '', DISCLAIMER_T + '. Review every question before you write.', '', FOOTER);
     return out.join('\n');
   }
-  function plain() { return markdown().replace(/^#+ /gm, '').replace(/_/g, ''); }
+  function plain() { return markdown().replace(/^#+ /gm, '').replace(/^> /gm, '').replace(/\*\*/g, '').replace(/_/g, ''); }
   function html() {
-    var h = '<h1>' + esc(title) + '</h1><p><em>' + esc(meta) + '</em></p><h2>Must-Answer Questions</h2><ol>';
+    var h = '<h1>' + esc(title) + '</h1><p><em>' + esc(meta) + '</em></p><p><strong>' + DISCLAIMER_T + '.</strong> ' + DISCLAIMER + '</p><h2>Must-Answer Questions</h2><ol>';
     must.forEach(function (x) { h += '<li>' + esc(x.text) + ' <em>(' + x.format + ', ' + x.label + ')</em></li>'; });
     h += '</ol><h2>Suggested Outline</h2><ul>';
     outline.forEach(function (o) { h += '<li><strong>H2:</strong> ' + esc(o.h) + ' <em>(' + esc(o.f) + ')</em></li>'; });
@@ -69,7 +71,7 @@
     if (faq.length) { h += '<h3>Frequently Asked Questions</h3><ul>'; faq.forEach(function (x) { h += '<li>' + esc(x.text) + '</li>'; }); h += '</ul>'; }
     h += '<h2>Facts And Entities To Include</h2><ul>' + (entities.length ? entities.map(function (e) { return '<li>' + esc(e) + '</li>'; }).join('') : '<li>None surfaced for this keyword</li>') + '</ul>';
     h += '<p><em>Suggested by the prediction engine. Verify every fact and figure before publishing.</em></p><h2>Writing Rules</h2><ul>' + RULES.map(function (r) { return '<li>' + r + '</li>'; }).join('') + '</ul>';
-    h += '<p><a href="https://archanacontent.github.io/asked/standard/">Read the Citable Passage Standard</a></p><hr><p>' + FOOTER + '</p>';
+    h += '<p><a href="https://archanacontent.github.io/asked/standard/">Read the Citable Passage Standard</a></p><hr><p><strong>' + DISCLAIMER_T + '.</strong> Review every question before you write.</p><p>' + FOOTER + '</p>';
     return h;
   }
 
