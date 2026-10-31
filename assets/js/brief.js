@@ -8,7 +8,7 @@
   var FACETS = ['Fit And Function', 'Cost', 'Security And Compliance', 'Integration And Rollout', 'Alternatives And Trade-Offs', 'Proof And Outcomes'];
   var FOOTER = 'Brief built with Asked, a free question finder by Archana Panda. Method published under CC BY-NC 4.0.';
   var DISCLAIMER_T = 'Suggested Questions, Not Final Answers';
-  var DISCLAIMER = 'Every question in this brief is a suggestion drawn from public search data and the Asked Method. Review each one against your topic, audience and product, and keep only the questions that genuinely fit. Your judgement makes the final call.';
+  var DISCLAIMER = 'These questions come from public search data and the Asked Method, so treat them as a starting point. Remove any that don\'t suit your topic or your buyers before the brief reaches a writer.';
   var RULES = ['Answer each question in the opening sentence of its section.', 'Make every passage stand alone, and name the subject in full.', 'Use specific figures, and link every one to its source.', 'Keep one question to one section.'];
 
   if (!state || !state.questions) { $('no-brief').hidden = false; $('back-link').href = '../'; return; }
@@ -36,7 +36,7 @@
 
   document.title = title + ' · Asked';
   $('b-title').textContent = title;
-  $('b-meta').innerHTML = 'Built with <span class="ital">Asked</span> · ' + esc(date) + ' · ' + esc(MARKETS[state.gl] || state.gl);
+  $('b-meta').innerHTML = 'Built with <span class="brand">Asked</span> · ' + esc(date) + ' · ' + esc(MARKETS[state.gl] || state.gl);
   $('b-must').innerHTML = must.map(function (x, i) {
     var k = kind(x.label);
     return '<li><span class="n">' + (i < 9 ? '0' : '') + (i + 1) + '</span><span class="q">' + esc(x.text) + '</span><span class="meta" style="display:inline-flex;gap:12px;align-items:center;font-size:11px;white-space:nowrap"><span style="color:rgba(238,241,248,.5)">' + x.format + '</span><span class="lab ' + k + '"><span class="dot ' + k + '" aria-hidden="true"></span>' + x.label + '</span></span></li>';
