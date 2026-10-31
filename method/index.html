@@ -44,12 +44,12 @@
 <section class="wrap" style="padding-top:80px;padding-bottom:56px;display:flex;flex-wrap:wrap;gap:48px;align-items:flex-end">
 <div style="flex:2 1 520px;min-width:0">
 <p class="eyebrow">The Method</p>
-<h1 class="h1-page">The <span class="ital">Asked</span> Method</h1>
+<h1 class="h1-page">The <span class="brand">Asked</span> Method</h1>
 <p class="subtitle">How Every Question Earns Its Place</p>
-<p class="lead" style="margin:0">A brief is only as useful as the questions inside it. <span class="ital">Asked</span> builds every brief from independent signals, labels each question with the evidence behind it, and tells the writer how to answer it in a form answer engines can lift and cite. Everything below is the working logic of the tool, published in full so anyone can inspect it, challenge it or build on it.</p>
+<p class="lead" style="margin:0">A brief is only as useful as the questions inside it. <span class="brand">Asked</span> builds each one from independent signals and labels every question with the evidence behind it. It also tells the writer what form each answer should take, so answer engines can lift and cite it. The full working logic of the tool is published below for anyone to inspect or build on.</p>
 </div>
 <div class="card" style="flex:1 1 280px;min-width:0">
-<p class="mini-label" style="margin:0 0 14px">The method at a glance</p>
+<p class="mini-label" style="margin:0 0 14px">The Method At A Glance</p>
 <div style="display:flex;flex-direction:column;gap:10px;font-size:13px">
 <span style="display:flex;gap:10px;align-items:center"><span class="dot confirmed" aria-hidden="true"></span>Signals from real search demand</span>
 <span style="display:flex;gap:10px;align-items:center"><span class="dot confirmed" aria-hidden="true"></span>Predicted fan-out for B2B buyers</span>
@@ -64,28 +64,28 @@
 
 <div class="acc-item"><button class="acc-btn big" type="button" aria-expanded="true" aria-controls="m1"><span>Why Keywords Alone No Longer Plan Content</span><span class="sign" aria-hidden="true">&minus;</span></button>
 <div class="acc-panel" id="m1">
-<p>AI search engines rarely answer a question by searching for it directly. Google describes how AI Mode <a href="https://www.aleydasolis.com/en/ai-search/google-query-fan-out/">breaks a question into subtopics</a> and runs many searches at once on the user's behalf, then assembles one answer from the pages that address each part. Google's own engineers have explained that these sub-queries often <a href="https://beta.searchenginejournal.com/google-explains-query-fan-out-ai-search/569087/">show zero volume</a> in traditional keyword tools, which is why a keyword list built on search volume misses most of what an answer engine actually looks for.</p>
-<p>The same explanation carries a second implication that shapes this method: answer engines extract and cite individual chunks of a page, not the page as a whole. A piece gets cited section by section, so the plan has to be built question by question.</p>
+<p>AI search engines rarely answer a question by searching for it directly. Google describes how AI Mode <a href="https://www.aleydasolis.com/en/ai-search/google-query-fan-out/">breaks a question into subtopics</a> and runs many searches at once on the user's behalf, then assembles one answer from the pages that address each part. Google's own engineers have explained that these sub-queries often <a href="https://beta.searchenginejournal.com/google-explains-query-fan-out-ai-search/569087/">show zero volume</a> in traditional keyword tools. A keyword list built on search volume therefore misses most of what an answer engine looks for.</p>
+<p>Google's explanation points to a second detail that shapes the method. Answer engines extract and cite individual chunks of a page, so a piece earns citations one section at a time and has to be planned one question at a time.</p>
 </div></div>
 
 <div class="acc-item"><button class="acc-btn big" type="button" aria-expanded="false" aria-controls="m2"><span>Where The Questions Come From</span><span class="sign" aria-hidden="true">+</span></button>
 <div class="acc-panel" id="m2" hidden>
 <div class="grid g300">
-<div class="card"><p style="margin:0 0 10px;display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;color:var(--bone)"><span class="dot demand" aria-hidden="true"></span>Search Demand</p><p><span class="ital">Asked</span> collects the questions people type into Google and Bing autocomplete around a keyword, expanded with question words and B2B modifiers such as pricing, integration and compliance. Autocomplete returns phrases <a href="https://apify.com/tiger19935/keyword-autocomplete-explorer">ranked by popularity, not volume</a>, so it shows what people ask without pretending to know exact numbers.</p></div>
-<div class="card"><p style="margin:0 0 10px;display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;color:var(--bone)"><span class="dot predicted" aria-hidden="true"></span>Predicted Fan-Out</p><p>The built-in engine breaks the keyword down along the B2B evaluation path below, the way an answer engine would. With a free Gemini key, a language model does the same work with more nuance. Fan-out is generative, so the exact sub-queries <a href="https://geotoolbox.ai/blog/query-fan-out">change from run to run</a>, and <span class="ital">Asked</span> treats this signal as a prediction of the territory an answer engine covers, never as a record of what it searched.</p></div>
+<div class="card"><p style="margin:0 0 10px;display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;color:var(--bone)"><span class="dot demand" aria-hidden="true"></span>Search Demand</p><p><span class="brand">Asked</span> collects the questions people search for in Google and Bing autocomplete around a keyword, expanded with question words and B2B modifiers such as pricing, integration and compliance. Autocomplete <a href="https://apify.com/tiger19935/keyword-autocomplete-explorer">ranks phrases by popularity</a> and gives no search volume, so it shows what buyers ask without claiming exact numbers.</p></div>
+<div class="card"><p style="margin:0 0 10px;display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;color:var(--bone)"><span class="dot predicted" aria-hidden="true"></span>Predicted Fan-Out</p><p>The built-in engine breaks the keyword down along the B2B evaluation path below, the way an answer engine would. With a free Gemini key, a language model does the same work with more nuance. Fan-out is generative, and <a href="https://geotoolbox.ai/blog/query-fan-out">the exact sub-queries change from run to run</a>. <span class="brand">Asked</span> treats this signal as a prediction of the ground an answer engine is likely to cover, and never presents it as a record of an actual search.</p></div>
 </div>
 </div></div>
 
 <div class="acc-item"><button class="acc-btn big" type="button" aria-expanded="false" aria-controls="m3"><span>The B2B Evaluation Path</span><span class="sign" aria-hidden="true">+</span></button>
 <div class="acc-panel" id="m3" hidden>
-<p>Software buyers research in a fairly predictable order, and <span class="ital">Asked</span> follows it when predicting fan-out. Every keyword is tested against the facets below.</p>
+<p>Software buyers research in a fairly predictable order, and <span class="brand">Asked</span> follows it when predicting fan-out. Every keyword is tested against the facets below.</p>
 <div class="grid g200" style="margin:20px 0">
 <div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Fit And Function</p><p>What the solution is, and whether it suits a team of this size and type.</p></div>
 <div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Cost</p><p>How vendors charge, by seat, usage or volume, and what that means for next year's bill.</p></div>
-<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Security And Compliance</p><p>The standards a buyer has to verify, such as SOC 2 Type II or data residency.</p></div>
-<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Integration And Rollout</p><p>Whether it connects to the existing stack and how much effort setup takes.</p></div>
-<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Alternatives And Trade-Offs</p><p>Named competitors, head-to-head comparisons and honest limitations.</p></div>
-<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Proof And Outcomes</p><p>Benchmarks, case results and the return a buyer can take to budget sign-off.</p></div>
+<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Security And Compliance</p><p>The certifications and data residency terms a security review will ask to see, SOC 2 Type II among them.</p></div>
+<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Integration And Rollout</p><p>Whether it plugs into the current stack, and how many weeks implementation realistically takes.</p></div>
+<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Alternatives And Trade-Offs</p><p>Named competitors and head-to-head comparisons, along with the honest limitations of each option.</p></div>
+<div class="card"><p style="margin:0 0 6px;font-size:14px;font-weight:500;color:var(--bone)">Proof And Outcomes</p><p>Benchmarks and case results, plus the return a buyer can take to budget sign-off.</p></div>
 </div>
 <p>A narrow technical keyword may open only a few facets, while a category keyword like data warehouse migration usually opens every one of them.</p>
 </div></div>
@@ -94,9 +94,9 @@
 <div class="acc-panel" id="m4" hidden>
 <p>Every question in a brief carries a label, so the writer can see why it is there.</p>
 <div class="legend" style="margin-top:18px">
-<div class="legend-row"><span class="dot confirmed" aria-hidden="true"></span><p><strong>Confirmed</strong> - the question appears in real autocomplete and also falls inside a predicted fan-out facet. These form the backbone of the piece.</p></div>
-<div class="legend-row"><span class="dot demand" aria-hidden="true"></span><p><strong>Search Demand</strong> - people type the question today, but it sits outside the predicted fan-out. It often deserves a short answer or an FAQ entry rather than a full section.</p></div>
-<div class="legend-row"><span class="dot predicted" aria-hidden="true"></span><p><strong>Predicted Fan-Out</strong> - the question follows the evaluation path, but nobody types it word for word yet. These are the questions competitors miss, carrying the most upside alongside the most uncertainty.</p></div>
+<div class="legend-row"><span class="dot confirmed" aria-hidden="true"></span><p><strong>Confirmed</strong> - The question appears in real autocomplete and also falls inside a predicted fan-out facet. Confirmed questions form the backbone of the piece.</p></div>
+<div class="legend-row"><span class="dot demand" aria-hidden="true"></span><p><strong>Search Demand</strong> - Buyers already search for the question, but it sits outside the predicted fan-out. It often deserves a short answer or an FAQ entry rather than a full section.</p></div>
+<div class="legend-row"><span class="dot predicted" aria-hidden="true"></span><p><strong>Predicted Fan-Out</strong> - The question follows the evaluation path, but nobody searches for it in those exact words yet. Competitors tend to miss these questions, so they carry the most upside and the most uncertainty.</p></div>
 </div>
 </div></div>
 
@@ -112,7 +112,7 @@
 
 <div class="acc-item"><button class="acc-btn big" type="button" aria-expanded="false" aria-controls="m6"><span>Answer Formats</span><span class="sign" aria-hidden="true">+</span></button>
 <div class="acc-panel" id="m6" hidden>
-<p>Answer engines lift answers that match the shape of the question. <span class="ital">Asked</span> reads the wording of each question and assigns the format its answer should take.</p>
+<p>Answer engines lift answers that match the shape of the question. <span class="brand">Asked</span> reads the wording of each question and assigns the format its answer should take.</p>
 <div class="panel" style="margin-top:20px;overflow:hidden;border-radius:14px">
 <div class="result-row" style="border-top:0"><p style="flex:0 0 170px;font-weight:500">Definition</p><p style="color:var(--mute)">What is and what does questions get a direct one or two sentence answer, placed first.</p></div>
 <div class="result-row"><p style="flex:0 0 170px;font-weight:500">Process</p><p style="color:var(--mute)">How to and how do questions get numbered steps.</p></div>
@@ -128,12 +128,12 @@
 <p>A method that cannot be tested is an opinion. After a piece goes live, users can compare its brief against free first-party data.</p>
 <p><strong>Bing Webmaster Tools</strong> - its AI Performance report shows <a href="https://www.practicalecommerce.com/bings-improved-ai-performance-section">citations across Copilot and partners</a>, listed by the grounding queries that triggered them.</p>
 <p><strong>Google Search Console</strong> - its generative AI report shows how often pages <a href="https://searchengineland.com/google-search-console-ai-performance-reports-and-search-generative-ai-control-rolling-out-globally-462214">appear in AI Overviews</a> and AI Mode.</p>
-<p><span class="ital">Asked</span> matches those queries against the questions it predicted and shows which surfaced in real AI answers. Users who choose to share the result add it to an open dataset, and each label's track record is published as the data grows.</p>
+<p><span class="brand">Asked</span> matches those queries against the questions it predicted and shows which ones surfaced in real AI answers. Users who choose to share the result add it to an open dataset, and each label's track record is published as the data grows.</p>
 </div></div>
 
 <div class="acc-item"><button class="acc-btn big" type="button" aria-expanded="false" aria-controls="m8"><span>What The Method Cannot Do</span><span class="sign" aria-hidden="true">+</span></button>
 <div class="acc-panel" id="m8" hidden>
-<p>Being clear about limits is part of the method. <span class="ital">Asked</span> does not report search volume, because autocomplete only signals relative popularity. It cannot see the exact prompts people type into AI assistants, and no public source offers that. Bing's citation report <a href="https://experienceleague.adobe.com/en/docs/brand-visibility-learn/tutorials/measurement/bing-webmaster-tools-ai-performance-report">does not cover ChatGPT</a> or other outside assistants, so validation reflects part of the AI search landscape rather than all of it. And because fan-out is generative, a prediction describes likely territory, never a guaranteed list.</p>
+<p>Being clear about limits is part of the method. <span class="brand">Asked</span> does not report search volume, because autocomplete only signals relative popularity. It cannot see the exact prompts people enter into AI assistants, and no public source offers them. Bing's citation report <a href="https://experienceleague.adobe.com/en/docs/brand-visibility-learn/tutorials/measurement/bing-webmaster-tools-ai-performance-report">does not cover ChatGPT</a> or other outside assistants, so validation covers only part of AI search. Fan-out is also generative, so a prediction describes likely ground and can never be a guaranteed list.</p>
 </div></div>
 
 </div>
@@ -142,8 +142,8 @@
 <section class="wrap grid g300" style="padding-bottom:112px">
 <a class="card link-card" href="../standard/" style="border-color:rgba(255,122,69,.3);background:rgba(255,122,69,.06);padding:32px"><span class="eyebrow" style="margin:0">The Writing Rules</span><span class="t" style="font-size:22px">The Citable Passage Standard</span><span class="d">Every brief carries a set of writing rules that make each section easy for an answer engine to lift and safe for a reader to trust out of context.</span><span class="go">Read The Standard</span></a>
 <div class="card" style="padding:32px;display:flex;flex-direction:column;gap:10px">
-<span class="mini-label" style="margin:0">Using and citing the method</span>
-<p>Published under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>, so anyone can share and adapt it for non-commercial work with credit. The code behind <span class="ital">Asked</span> is open source under AGPL-3.0.</p>
+<span class="mini-label" style="margin:0">Using And Citing The Method</span>
+<p>Published under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>, so anyone can share and adapt it for non-commercial work with credit. The code behind <span class="brand">Asked</span> is open source under AGPL-3.0.</p>
 <p style="margin-top:6px;padding:14px 16px;border-radius:10px;background:rgba(5,6,15,.7);border:1px solid rgba(255,255,255,.08);color:rgba(238,241,248,.8)">Panda, A. (2026). <span class="ital">The Asked Method: Evidence-Backed Question Planning For AI Search.</span> <a href="https://doi.org/10.5281/zenodo.23732497">https://doi.org/10.5281/zenodo.23732497</a></p>
 </div>
 </section>
@@ -152,7 +152,7 @@
 <footer class="site-footer">
 <div class="wrap">
 <span class="wordmark">Asked</span>
-<p>Code licensed under AGPL-3.0 · Method licensed under CC BY-NC 4.0 · <span class="ital">Asked</span> is an independent project and is not affiliated with Google or Microsoft · Built by <a href="https://archanacontent.github.io">Archana Panda</a></p>
+<p>Code licensed under AGPL-3.0 · Method licensed under CC BY-NC 4.0 · <span class="brand">Asked</span> is an independent project and is not affiliated with Google or Microsoft · Built by <a href="https://archanacontent.github.io">Archana Panda</a></p>
 </div>
 </footer>
 <script src="../assets/js/common.js"></script>
